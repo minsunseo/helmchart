@@ -371,10 +371,10 @@ slave:
     # storageClass: "-"
     annotations:
     accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
     ## Persistent Volume size
     ##
-    size: 8Gi
+    size: 2Gi
 
   extraInitContainers: |
   # - name: do-something
