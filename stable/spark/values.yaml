@@ -82,11 +82,11 @@ Zeppelin:
       ## GKE, AWS & OpenStack)
       StorageClass: "-"
       ## Set default PVC size
-      Size: 10G
+      Size: 2G
       ## Set default PVC access mode: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
       AccessMode: ReadWriteOnce
     Notebook:
       Enabled: false
       StorageClass: "-"
-      Size: 10G
+      Size: 2G
       AccessMode: ReadWriteOnce
