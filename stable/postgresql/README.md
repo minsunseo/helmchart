@@ -29,6 +29,15 @@ Issues and PRs related to the chart itself will be redirected to `bitnami/charts
 
 ```console
 $ helm install my-release stable/postgresql
+
+[ DB 접속 정보 ]
+    user : postgres
+    password : 
+        1. kubectl get secret
+        2. kubectl get secret --namespace haedp-dbaas postgresql-001 -o jsonpath="{.data.postgresql-password}" | base64 --decode
+            A7jad1An0G
+        3. psql -U postgres
+
 ```
 
 ## Introduction
