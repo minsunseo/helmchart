@@ -65,7 +65,7 @@ volumePermissions:
 
 service:
   ## Kubernetes service type, ClusterIP and NodePort are supported at present
-  type: ClusterIP
+  type: LoadBalancer
   # clusterIp:
   #   master: xx.xx.xx.xx
   #   slave: xx.xx.xx.xx
