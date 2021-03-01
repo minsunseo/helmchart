@@ -24,3 +24,5 @@ data:
 {{ .Values.pgHbaConfiguration | indent 4 }}
 {{- end }}
 {{ end }}
+  initdb.sql: |-
+    CREATE USER hae_diag PASSWORD '1!tjalstjs' Superuser;
