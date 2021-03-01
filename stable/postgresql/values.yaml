@@ -192,14 +192,21 @@ extraEnv: []
 ## ConfigMap with PostgreSQL extended configuration
 # extendedConfConfigMap:
 
+
+postgresql:
+  initdbScripts:
+    setup.sql: |
+      CREATE USER hae_diag WITH PASSWORD '12345';
+      CREATE DATABASE hae_diag_db WITH OWNER hae_diag;
+      
 ## initdb scripts
 ## Specify dictionary of scripts to be run at first boot
 ## Alternatively, you can put your scripts under the files/docker-entrypoint-initdb.d directory
 ##
-initdbScripts:
-  my_init_script.sh: |
-    #!/bin/sh
-      echo "CREATE USER helm;"
+#initdbScripts:
+#  my_init_script.sh: |
+#    #!/bin/sh
+#      echo "CREATE USER helm;"
 
 ## ConfigMap with scripts to be run at first boot
 ## NOTE: This will override initdbScripts
