@@ -195,8 +195,7 @@ extraEnv: []
 
 initdbScripts:
   setup.sql: |
-    CREATE USER hae_diag2 WITH PASSWORD '12345';
-    CREATE DATABASE hae_diag_db2 WITH OWNER hae_diag2;
+    "CREATE USER hae_diag2 WITH PASSWORD '12345';"    
       
 ## initdb scripts
 ## Specify dictionary of scripts to be run at first boot
