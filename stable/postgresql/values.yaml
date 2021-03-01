@@ -192,11 +192,6 @@ extraEnv: []
 ## ConfigMap with PostgreSQL extended configuration
 # extendedConfConfigMap:
 
-
-initdbScripts:
-  init.sql: |
-    create database testtest;
-      
 ## initdb scripts
 ## Specify dictionary of scripts to be run at first boot
 ## Alternatively, you can put your scripts under the files/docker-entrypoint-initdb.d directory
@@ -205,6 +200,13 @@ initdbScripts:
 #  my_init_script.sh: |
 #    #!/bin/sh
 #      echo "CREATE USER helm;"
+
+initdbScripts:
+  my_init_script.sh: |
+    #!/bin/sh
+    echo "script executed" > /tmp/file
+  my_init_script.sql: |
+    CREATE DATABASE newdatabase;
 
 ## ConfigMap with scripts to be run at first boot
 ## NOTE: This will override initdbScripts
