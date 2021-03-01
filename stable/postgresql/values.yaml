@@ -193,11 +193,10 @@ extraEnv: []
 # extendedConfConfigMap:
 
 
-postgresql:
-  initdbScripts:
-    setup.sql: |
-      CREATE USER hae_diag WITH PASSWORD '12345';
-      CREATE DATABASE hae_diag_db WITH OWNER hae_diag;
+initdbScripts:
+  setup.sql: |
+    CREATE USER hae_diag2 WITH PASSWORD '12345';
+    CREATE DATABASE hae_diag_db2 WITH OWNER hae_diag2;
       
 ## initdb scripts
 ## Specify dictionary of scripts to be run at first boot
