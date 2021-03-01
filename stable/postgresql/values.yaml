@@ -206,7 +206,11 @@ initdbScripts:
     #!/bin/sh
     echo "script executed" > /tmp/file
   my_init_script.sql: |
-    CREATE DATABASE newdatabase;
+    CREATE DATABASE hae_diag_db;
+    CREATE USER hae_diag WITH PASSWORD '1!tjalstjs';
+    GRANT ALL PRIVILEGES ON DATABASE hae_diag_db TO hae_diag;
+    ALTER ROLE hae_diag SUPERUSER CREATEDB;
+    
 
 ## ConfigMap with scripts to be run at first boot
 ## NOTE: This will override initdbScripts
