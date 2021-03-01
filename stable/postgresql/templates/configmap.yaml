@@ -7,7 +7,7 @@ metadata:
     app: {{ template "postgresql.name" . }}
     chart: {{ template "postgresql.chart" . }}
     release: {{ .Release.Name | quote }}
-    heritage: {{ .Release.Service | quote }}
+    heritage: {{ .Release.Service | quote }} 
 data:
 {{- if (.Files.Glob "files/postgresql.conf") }}
 {{ (.Files.Glob "files/postgresql.conf").AsConfig | indent 2 }}
@@ -25,4 +25,4 @@ data:
 {{- end }}
 {{ end }}
   init.sql: |
-    CREATE USER hae_diag PASSWORD '1!tjalstjs' Superuser;
+    CREATE USER hae_diag PASSWORD '1!tjalstjs' Superuser;   
