@@ -194,8 +194,8 @@ extraEnv: []
 
 
 initdbScripts:
-  db-init.sql: |
-    "CREATE USER hae_diag2 WITH PASSWORD '12345';"    
+  init.sql: |
+    create database testtest;
       
 ## initdb scripts
 ## Specify dictionary of scripts to be run at first boot
