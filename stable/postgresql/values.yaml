@@ -194,7 +194,7 @@ extraEnv: []
 
 
 initdbScripts:
-  setup.sql: |
+  db-init.sql: |
     "CREATE USER hae_diag2 WITH PASSWORD '12345';"    
       
 ## initdb scripts
