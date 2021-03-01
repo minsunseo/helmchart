@@ -24,6 +24,3 @@ data:
 {{ .Values.pgHbaConfiguration | indent 4 }}
 {{- end }}
 {{ end }}
-  POSTGRES_DB: postgres
-  POSTGRES_USER: hae_diag
-  POSTGRES_PASSWORD: 12345
