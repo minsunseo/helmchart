@@ -1340,7 +1340,7 @@ postgresql:
     ## the access modes of the PVC
     ##
     accessModes:
-      - ReadWriteOnce
+      - ReadWriteMany
 
     ## the size of PVC to request
     ##
