@@ -1331,7 +1331,7 @@ postgresql:
     ## WARNING:
     ## - if false, data will be LOST as postgres Pods restart
     ##
-    enabled: true
+    enabled: false
 
     ## the name of the StorageClass used by the PVC
     ##
@@ -1460,7 +1460,7 @@ redis:
       ## the access mode of the PVC
       ##
       accessModes:
-      - ReadWriteOnce
+      - ReadWriteMany
 
       ## the size of PVC to request
       ##
